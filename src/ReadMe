@@ -1,0 +1,135 @@
+# 06 — Mini-projet React : Gestionnaire de tâches
+
+## Présentation
+
+Ce mini-projet consiste à faire évoluer une application React de gestion de tâches (*Todo List*).
+
+Vous disposez d'une première version fonctionnelle. Votre objectif est d'ajouter progressivement de nouvelles fonctionnalités en mobilisant les notions étudiées en cours.
+
+**Durée :** 3 h 30  
+**Modalité :** Travail en binôme  
+**Technologies :** React, JavaScript, JSX, CSS
+
+## Fonctionnalités déjà présentes
+
+L'application permet actuellement de :
+
+- Afficher trois tâches initiales.
+- Ajouter une tâche grâce à un formulaire contrôlé.
+- Refuser les tâches vides ou composées uniquement d'espaces.
+- Réinitialiser le champ après un ajout.
+
+## Structure du projet
+
+- `App.jsx` : composant principal et gestion de la liste des tâches.
+- `TaskForm.jsx` : formulaire d'ajout.
+- `TaskList.jsx` : affichage de la liste.
+- `TaskItem.jsx` : affichage d'une tâche.
+
+## Démarrage
+
+Après avoir récupéré le dépôt, exécutez :
+
+```bash
+npm install
+npm run dev
+```
+
+Ouvrez ensuite l'adresse indiquée par Vite dans votre navigateur.
+
+## Socle commun — Défis 1 à 5
+
+### Défi 1 — Terminer une tâche
+
+Permettre à l'utilisateur de cocher ou décocher une tâche.
+
+**Critères de réussite :**
+- Chaque tâche possède une case à cocher.
+- Le texte d'une tâche terminée est barré.
+- Décocher une tâche restaure son affichage normal.
+
+### Défi 2 — Compteur dynamique
+
+Afficher le nombre de tâches restantes sur le nombre total.
+
+Exemple : `2 tâches restantes sur 3`.
+
+**Critère de réussite :** le compteur se met à jour automatiquement après chaque modification de la liste.
+
+### Défi 3 — Filtrer l'affichage
+
+Ajouter trois boutons :
+
+- **Toutes** : afficher toutes les tâches.
+- **À faire** : afficher les tâches non terminées.
+- **Terminées** : afficher les tâches terminées.
+
+**Critères de réussite :**
+- Chaque filtre affiche les bonnes tâches.
+- Le bouton sélectionné est visuellement identifiable.
+- Changer de filtre ne supprime aucune tâche.
+
+### Défi 4 — Supprimer une tâche
+
+Ajouter un bouton « Supprimer » à chaque tâche.
+
+**Critère de réussite :** seule la tâche sélectionnée disparaît et le compteur est actualisé.
+
+### Défi 5 — Sauvegarder et restaurer les tâches
+
+Conserver les tâches même après une actualisation de la page.
+
+**Critères de réussite :**
+- Les tâches sont enregistrées dans `localStorage`.
+- Les tâches sauvegardées sont restaurées au chargement.
+- Les ajouts, suppressions et changements d'état sont conservés après actualisation.
+
+## Approfondissements — Défis 6 et 7
+
+### Défi 6 — Modifier une tâche existante
+
+Permettre de modifier le texte d'une tâche.
+
+**Critères de réussite :**
+- Un bouton « Modifier » permet de passer en mode édition.
+- Le champ contient le texte actuel.
+- « Enregistrer » valide la modification.
+- « Annuler » conserve le texte d'origine.
+
+### Défi 7 — Améliorer la validation
+
+Renforcer la fiabilité du formulaire.
+
+**Critères de réussite :**
+- Refuser les tâches vides ou composées d'espaces.
+- Limiter la saisie à 80 caractères.
+- Refuser les doublons, sans tenir compte des majuscules/minuscules.
+- Afficher un message d'erreur compréhensible.
+
+## Tests croisés
+
+En fin de TP, échangez votre application avec un autre binôme.
+
+Vérifiez notamment :
+- L'ajout d'une tâche valide et le refus d'une tâche vide.
+- Le cochage et le compteur.
+- Les trois filtres.
+- La suppression.
+- La modification et l'annulation, si réalisées.
+- La conservation des données après actualisation.
+
+Pour chaque anomalie rencontrée, décrivez les étapes permettant de la reproduire.
+
+## Contraintes
+
+- Utiliser React et les composants du projet.
+- Ne pas utiliser d'API ni de base de données externe.
+- `localStorage` et `useEffect` sont autorisés.
+- Ne pas modifier directement les tableaux stockés dans le state.
+- Conserver un code lisible et des composants aux responsabilités clairement définies.
+
+## Travail attendu
+
+À la fin de la séance, votre application doit être fonctionnelle pour les défis réalisés.
+
+Effectuez des commits Git réguliers, avec des messages explicites, pour conserver une trace de votre progression.
